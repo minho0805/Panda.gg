@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ summoner_name }} 최근 경기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto py-10">
+        <h1 class="text-2xl font-bold mb-6">{{ summoner_name }}님의 최근 경기</h1>
+
+        {% for match in matches %}
+            <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                <div class="flex items-center">
+                    <img src="{{ match.champion_img }}" alt="champ" class="w-12 h-12 mr-4">
+                    <h2 class="text-xl font-bold">{{ match.champion }}</h2>
+                    <span class="ml-4 {% if match.win %}text-green-400{% else %}text-red-400{% endif %}">
+                        {% if match.win %}승리{% else %}패배{% endif %}
+                    </span>
+                </div>
+
+                <p class="mt-2">KDA: {{ match.KDA }}</p>
+
+                <div class="mt-2">
+                    <strong>스펠:</strong>
+                    {% for spell in match.spells %}
+                        <img src="{{ spell.img }}" alt="{{ spell.name }}" class="inline w-8 h-8 mr-1">
+                    {% endfor %}
+                </div>
+
+                <div class="mt-2">
+                    <strong>아이템:</strong>
+                    {% for item in match.item_list %}
+                        {% if item.img %}
+                            <img src="{{ item.img }}" alt="item" class="inline w-8 h-8 mr-1">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

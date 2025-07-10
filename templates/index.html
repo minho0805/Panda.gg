@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda.gg - 롤 전적 검색기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-b from-gray-900 to-gray-800 py-6 shadow-lg">
+        <div class="container mx-auto flex flex-col items-center">
+            <img src="{{ url_for('static', filename='panda-logo.png') }}" alt="Panda.gg Logo" class="w-64 h-auto mb-4">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold mb-2 text-white">🔍 Panda.GG</h1>
+                <a href="{{ url_for('community') }}" class="text-blue-400 hover:text-yellow-300 transition duration-200">📝 커뮤니티 게시판 보기</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Form -->
+    <div class="flex justify-center items-center mt-20 px-4">
+        <form action="{{ url_for('result') }}" method="get" class="w-full max-w-lg">
+            <div class="relative">
+                <input type="text" name="summonername" placeholder="예: Hide on bush#KR1" required
+                       class="w-full p-4 pl-5 pr-16 rounded-full bg-gray-800 border border-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <button type="submit"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-2 px-4 rounded-full hover:from-blue-700 hover:to-blue-800 transition">
+                    🔍
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

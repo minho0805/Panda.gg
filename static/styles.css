@@ -1,0 +1,167 @@
+```css
+/* Tailwind CSS CDN은 HTML 파일에 포함된다고 가정합니다 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 기본 스타일 */
+body {
+    font-family: sans-serif;
+    background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+/* 내비게이션 바 */
+nav {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+nav .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e5e7eb; /* hover:text-gray-200 */
+}
+
+/* 메인 콘텐츠 컨테이너 */
+.container {
+    max-width: 1280px;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 게시글 카드 */
+.post-card {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.post-card h2 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color \n: #1f2937; /* text-gray-800 */
+}
+
+.post-card p {
+    color: #4b5563; /* text-gray-600 또는 text-gray-700 */
+}
+
+/* 성공 메시지 */
+.success-message {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-message p {
+    color: #16a34a; /* text-green-600 */
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.success-message a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.success-message a:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* 글 작성 폼 */
+.write-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.write-form h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.write-form a {
+    color: #2563eb;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.write-form a:hover {
+    text-decoration: underline;
+}
+
+.write-form label {
+    display: block;
+    color: #1f2937;
+    font-weight: 500; /* font-medium */
+    margin-bottom: 0.5rem;
+}
+
+.write-form input,
+.write-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.write-form input:focus,
+.write-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5); /* focus:ring-2 focus:ring-blue-600 */
+}
+
+.write-form textarea {
+    height: 150px; /* rows="6" */
+}
+
+.write-form button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.write-form button:hover {
+    background-color: #1d4ed8;
+}
+```

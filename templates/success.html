@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 등록 성공</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 외부 CSS 연결 (Flask static 경로 사용) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1>📝 커뮤니티</h1>
+            <div class="space-x-4">
+                <a href="{{ url_for('community') }}">🏠 홈</a>
+                <a href="{{ url_for('write') }}">✏️ 글쓰기</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="success-message">
+            <p>✅ 글이 성공적으로 등록되었습니다!</p>
+            <a href="{{ url_for('community') }}">커뮤니티로 돌아가기</a>
+        </div>
+    </div>
+</body>

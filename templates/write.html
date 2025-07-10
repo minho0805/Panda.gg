@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 글 작성</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 외부 CSS (Flask static 폴더에서 로드) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1>📝 커뮤니티</h1>
+            <div class="space-x-4">
+                <a href="{{ url_for('community') }}">🏠 홈</a>
+                <a href="{{ url_for('write') }}">✏️ 글쓰기</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="write-form">
+            <h2>✏️ 새 글 작성</h2>
+            <a href="{{ url_for('community') }}">← 커뮤니티로 돌아가기</a>
+
+            <!-- 글쓰기 form -->
+            <form method="POST" action="{{ url_for('write') }}">
+                <label for="author">작성자 (선택):</label>
+                <input type="text" id="author" name="author" placeholder="작성자 이름을 입력하세요">
+                
+                <label for="title">제목:</label>
+                <input type="text" id="title" name="title" required placeholder="제목을 입력하세요">
+                
+                <label for="content">내용:</label>
+                <textarea id="content" name="content" required placeholder="내용을 입력하세요"></textarea>
+                
+                <button type="submit">등록</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
