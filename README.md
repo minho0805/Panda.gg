@@ -7,7 +7,20 @@
 
 ## 📸 데모 스크린샷
 
-> (여기에 추후 사이트 실행 화면 캡처 이미지 첨부)
+### 메인 화면
+![Main](images/main.png)
+
+### 전적 검색 화면
+![Search](images/search.png)
+
+### 전적 히스토리
+![Match History](images/match_history.png)
+
+### 글 작성 성공 화면
+![Post Success](images/post_succss.png)
+
+### 커뮤니티 화면
+![Community](images/community.png)
 
 ---
 
