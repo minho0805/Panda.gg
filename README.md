@@ -16,11 +16,12 @@
 ### 전적 히스토리
 ![Match History](images/match_history.png)
 
-### 글 작성 성공 화면
-![Post Success](images/post_succss.png)
 
 ### 커뮤니티 화면
 ![Community](images/community.png)
+
+### 글 작성 성공 화면
+![Post Success](images/post_succss.png)
 
 ---
 
