@@ -10,8 +10,6 @@
 ### 메인 화면
 ![Main](images/main.png)
 
-### 전적 검색 화면
-![Search](images/search.png)
 
 ### 전적 히스토리
 ![Match History](images/match_history.png)
@@ -20,9 +18,9 @@
 ### 커뮤니티 화면
 ![Community](images/community.png)
 
-### 글 작성 성공 화면
-![Post Success](images/post_succss.png)
 
+### 글 작성 성공 화면
+![Search](images/search.png)
 ---
 
 ## 🚀 주요 기능
